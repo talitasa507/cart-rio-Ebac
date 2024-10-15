@@ -1,0 +1,133 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMwB3VKGxhAMSeMcbyEWT9v",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/talitasa507/cart-rio-Ebac/blob/main/Calculardora\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OZB1wEcJPAiZ",
+        "outputId": "5df0411b-149a-438c-985d-a142db313f3f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 1\n",
+            "Digite o segundo número: 2\n",
+            "\n",
+            "Escolha a operação:\n",
+            "1. Soma\n",
+            "2. Subtração\n",
+            "3. Multiplicação\n",
+            "4. Divisão\n",
+            "5. Sair\n",
+            "\n",
+            "Digite o número da operação desejada: 1\n",
+            "\n",
+            "Resultado: 1 + 2 = 3\n",
+            "\n",
+            "Digite o primeiro número: 1\n",
+            "Digite o segundo número: 3\n",
+            "\n",
+            "Escolha a operação:\n",
+            "1. Soma\n",
+            "2. Subtração\n",
+            "3. Multiplicação\n",
+            "4. Divisão\n",
+            "5. Sair\n",
+            "\n",
+            "Digite o número da operação desejada: 3\n",
+            "\n",
+            "Resultado: 1 * 3 = 3\n",
+            "\n",
+            "Digite o primeiro número: 1\n",
+            "Digite o segundo número: 2\n",
+            "\n",
+            "Escolha a operação:\n",
+            "1. Soma\n",
+            "2. Subtração\n",
+            "3. Multiplicação\n",
+            "4. Divisão\n",
+            "5. Sair\n"
+          ]
+        }
+      ],
+      "source": [
+        "def calcular():\n",
+        "    while True:\n",
+        "        # Receber os dois números do usuário\n",
+        "        num1 = input(\"Digite o primeiro número: \")\n",
+        "        num2 = input(\"Digite o segundo número: \")\n",
+        "\n",
+        "        # Converter para número inteiro ou ponto flutuante\n",
+        "        try:\n",
+        "            num1 = float(num1) if '.' in num1 else int(num1)\n",
+        "            num2 = float(num2) if '.' in num2 else int(num2)\n",
+        "        except ValueError:\n",
+        "            print(\"Por favor, insira números válidos.\")\n",
+        "            continue\n",
+        "\n",
+        "        # Exibir opções de operações\n",
+        "        print(\"\\nEscolha a operação:\")\n",
+        "        print(\"1. Soma\")\n",
+        "        print(\"2. Subtração\")\n",
+        "        print(\"3. Multiplicação\")\n",
+        "        print(\"4. Divisão\")\n",
+        "        print(\"5. Sair\")\n",
+        "\n",
+        "        # Receber a escolha do usuário\n",
+        "        operacao = input(\"\\nDigite o número da operação desejada: \")\n",
+        "\n",
+        "        # Executar a operação escolhida\n",
+        "        if operacao == '1':\n",
+        "            print(f\"\\nResultado: {num1} + {num2} = {num1 + num2}\\n\")\n",
+        "        elif operacao == '2':\n",
+        "            print(f\"\\nResultado: {num1} - {num2} = {num1 - num2}\\n\")\n",
+        "        elif operacao == '3':\n",
+        "            print(f\"\\nResultado: {num1} * {num2} = {num1 * num2}\\n\")\n",
+        "        elif operacao == '4':\n",
+        "            if num2 != 0:\n",
+        "                print(f\"\\nResultado: {num1} / {num2} = {num1 / num2}\\n\")\n",
+        "            else:\n",
+        "                print(\"\\nErro: Divisão por zero não é permitida.\\n\")\n",
+        "        elif operacao == '5':\n",
+        "            print(\"\\nSaindo da calculadora. Até mais!\")\n",
+        "            break\n",
+        "        else:\n",
+        "            print(\"\\nOpção inválida. Tente novamente.\\n\")\n",
+        "\n",
+        "# Executar a função da calculadora\n",
+        "calcular()\n"
+      ]
+    }
+  ]
+}
